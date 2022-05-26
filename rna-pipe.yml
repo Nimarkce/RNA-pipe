@@ -34,4 +34,4 @@ dependencies:
     - htseq==2.0.1
     - numpy==1.22.3
     - pysam==0.19.0
-prefix: /home/qukun/ly0613/miniconda/envs/rna-pipe
+prefix: /home/user-teacher/user/miniconda/envs/rna-pipe

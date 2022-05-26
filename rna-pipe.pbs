@@ -10,17 +10,17 @@
 #PBS -l walltime=12:00:00
 
 ## before run rna-pipe, use conda install -f rna-pipe.yml first
+
 conda deactivate 
 source activate rna-pipe
-# PIPEDIR=/home/qukun/ly0613/workspace/labtrain/caipengfei/7rnaseq
-PIPEDIR=/home/qukun/ly0613/workspace/labtrain/caipengfei/8rnapipe
+PIPEDIR=/home/user-teacher/user/workspace/labtrain/caipengfei/rnapipe
 SCDIR=$PIPEDIR/scripts
 DATADIR=$PIPEDIR/data
 REFDIR=${PIPEDIR}/ref
-SRADIR=/home/qukun/ly0613/ncbi/public/sra # no better choice now
+SRADIR=/home/user-teacher/user/ncbi/public/sra # no better choice now
 FQDIR=$PIPEDIR/data/fq
 QCedDIR=$PIPEDIR/data/fp
-FPDIR=$QCedDIR
+FPDIR=$QCedDIRs
 MAPDIR=$DATADIR/mapped
 COUNTDIR=$DATADIR/count
 
