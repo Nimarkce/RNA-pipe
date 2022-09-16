@@ -13,11 +13,11 @@
 
 conda deactivate 
 source activate rna-pipe
-PIPEDIR=/home/user-teacher/user/workspace/labtrain/caipengfei/rnapipe
+PIPEDIR=~/rnapipe # change it to your RNA-pipe folder. The parent folder of script.
+SRADIR=~/ncbi/public/sra # The default one is "~/ncbi/public/sra/"
 SCDIR=$PIPEDIR/scripts
 DATADIR=$PIPEDIR/data
-REFDIR=${PIPEDIR}/ref
-SRADIR=/home/user-teacher/user/ncbi/public/sra # no better choice now
+REFDIR=$PIPEDIR/ref
 FQDIR=$PIPEDIR/data/fq
 QCedDIR=$PIPEDIR/data/fp
 FPDIR=$QCedDIRs
@@ -25,14 +25,15 @@ MAPDIR=$DATADIR/mapped
 COUNTDIR=$DATADIR/count
 
 cd $PIPEDIR
-mkdir scripts data ref 
+mkdir data ref 
 cd data
 mkdir sra fp fq mapped count fastqc-fred fastqc
 
-# build index
+# build index 
 cd $REFDIR
 module load hisat2
-wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna_index/Homo_sapiens.GRCh38.dna.toplevel.fa.gz
+# change the reference gene files to what you need
+wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna_index/Homo_sapiens.GRCh38.dna.toplevel.fa.gz 
 wget ftp://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz
 gunzip Homo_sapiens.GRCh38.106.gtf.gz
 gunzip Homo_sapiens.GRCh38.dna.toplevel.fa.gz 
@@ -41,7 +42,7 @@ hisat2-build -p 10 Homo_sapiens.GRCh38.dna.toplevel.fa hg38 > build_index.log
 
 # fetch .sra files
 cd $DATADIR
-module load sratoolkit
+module load sratoolkit 
 for item in 86 87 88 89 90 91 92 93
 do 
 prefetch SRR84676$item & 
