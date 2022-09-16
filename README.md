@@ -21,5 +21,5 @@ Easy upstream RNA-seq analysis for beginners
 4. Run `bash rna-pipe.sh` to get the results of count matrix.
 
 
-This project is actually one part of my work for the course *bioinformatics*. 
+This project is actually part of my work for the course *bioinformatics*. 
 
