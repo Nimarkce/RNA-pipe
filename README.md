@@ -12,14 +12,14 @@ Easy upstream RNA-seq analysis for beginners
 
 **How to use RNA-pipe:**
 
-1. Install **[conda](https://anaconda.org/)** in your server.
+1. Install **[miniconda](https://docs.conda.io/en/latest/miniconda.html)** in your server.
 2. Change the working dictionary to RNA-pipe, and run ```conda create -f rna-pipe.yml ```
-3. Change the file name in `rna-pipe.sh` to make sure it download the right file for you.
+3. Change the file name in `rna-pipe.sh` to make sure it is proper for you.
    1. Change the value of `PIPEDIR` to your folder where you have RNA-pipe. 
    2. Change the value of `SRADIR` if your `prefetch` fuction download it to other folder. Use the default value is OK.
-   3. Change the reference file place and filename in the step: **# bulid index** to the reference file you want. The default is used for the class.
+   3. Change the reference file place and file name in the step: **# bulid index** to the reference file you want. The default is used for the class.
 4. Run `bash rna-pipe.sh` to get the results of count matrix.
 
 
-This project is actually part of my work for the course *bioinformatics*. 
+This project is part of my work for the course *bioinformatics* at USTC. The default values are used for the samples of the class.
 

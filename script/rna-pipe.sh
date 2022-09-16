@@ -3,8 +3,8 @@
 #DO NOT RUN THIS SCRIPT DIRECTLY
 #PLEASE RUN THIS SCRIPT WITH qsub:qusub intelmpi_job.pbs
 #PBS -N RNA-pipe
-#PBS -o logs/log.pipe
-#PBS -e logs/err.pipe
+#PBS -o log.pipe
+#PBS -e err.pipe
 #PBS -q batch
 #PBS -l nodes=1:ppn=10
 #PBS -l walltime=12:00:00
